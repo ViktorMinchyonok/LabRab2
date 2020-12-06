@@ -52,17 +52,17 @@ public class MainFrame extends JFrame {
 	   }
 
 	   public MainFrame() {
-	      super("Вычисление формулы");
+	      super("Р’С‹С‡РёСЃР»РµРЅРёРµ С„РѕСЂРјСѓР»С‹");
 	      setSize(WIDTH,HEIGHT);
 	      Toolkit kit = Toolkit.getDefaultToolkit();
 	      setLocation((kit.getScreenSize().width - WIDTH) / 2, (kit.getScreenSize().height - HEIGHT) / 2);
 	      hboxFormulaType.add(Box.createHorizontalGlue());
-	      addRadioButton("Формула 1", 1);
-	      addRadioButton("Формула 2", 2);
+	      addRadioButton("Р¤РѕСЂРјСѓР»Р° 1", 1);
+	      addRadioButton("Р¤РѕСЂРјСѓР»Р° 2", 2);
 	      radioButton.setSelected(radioButton.getElements().nextElement().getModel(),true);
 	      hboxFormulaType.add(Box.createHorizontalGlue());
 	      Box XBox = Box.createHorizontalBox();
-	      JLabel x = new JLabel(" Х:");
+	      JLabel x = new JLabel(" x:");
 	      
 	      XBox.add(x);
 	      
@@ -86,7 +86,7 @@ public class MainFrame extends JFrame {
 	      ZBox.add(Box.createHorizontalStrut(1));
 	      ZBox.add(textfieldZ);
 	      textfieldZ.setMaximumSize(textfieldZ.getPreferredSize());
-	      JLabel Result = new JLabel("Результат");
+	      JLabel Result = new JLabel("Р РµР·СѓР»СЊС‚Р°С‚");
 	      field_result = new JTextField("0", 15);
 	      Box hboxResult = Box.createHorizontalBox();
 	      hboxResult.add(Box.createHorizontalGlue());
@@ -96,7 +96,7 @@ public class MainFrame extends JFrame {
 	      field_result.setMaximumSize(field_result.getPreferredSize());
 	      hboxResult.add(Box.createHorizontalGlue());
 	      hboxResult.setBorder(BorderFactory.createLineBorder(Color.GRAY));
-	      JButton buttonCalc = new JButton("Вычислить");
+	      JButton buttonCalc = new JButton("Р’С‹С‡РёСЃР»РёС‚СЊ");
 	      buttonCalc.addActionListener(new ActionListener()
 			{
 				public void actionPerformed(ActionEvent ev)
@@ -113,12 +113,12 @@ public class MainFrame extends JFrame {
 					}
 					catch(NumberFormatException ex)
 					{
-						JOptionPane.showMessageDialog(MainFrame.this, "Ошибка в формате записи числа с " +
-								"плавающей точкой","Ошибочный формат числа", JOptionPane.WARNING_MESSAGE);   
+						JOptionPane.showMessageDialog(MainFrame.this, "РћС€РёР±РєР° РІ С„РѕСЂРјР°С‚Рµ Р·Р°РїРёСЃРё С‡РёСЃР»Р° СЃ " +
+								"РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№","РћС€РёР±РѕС‡РЅС‹Р№ С„РѕСЂРјР°С‚ С‡РёСЃР»Р°", JOptionPane.WARNING_MESSAGE);    
 					}
 				}
 			});
-	      JLabel labelForRes = new JLabel("Сумма");
+	      JLabel labelForRes = new JLabel("РЎСѓРјРјР°");
 	      field_sum = new JTextField("0", 15);
 	      field_sum.setMaximumSize(this.field_sum.getPreferredSize());
 	      Box hboxRes = Box.createHorizontalBox();
@@ -151,7 +151,7 @@ public class MainFrame extends JFrame {
 					sum=0.0;
 				}});
 
-			JButton buttonReset = new JButton("Очистить поля"); 
+			JButton buttonReset = new JButton("РћС‡РёСЃС‚РёС‚СЊ РїРѕР»СЏ"); 
 			buttonReset.addActionListener(new ActionListener() 
 			{ 		
 				public void actionPerformed(ActionEvent ev) 
