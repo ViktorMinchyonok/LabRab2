@@ -16,8 +16,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
-@SuppressWarnings("serial")
-public class MainFrame extends JFrame {
+        @SuppressWarnings("serial")
+        public class MainFrame extends JFrame {
 	private static final int WIDTH = 400;
 	private static final int HEIGHT = 320;
 	   private JTextField textfieldX;
@@ -62,7 +62,7 @@ public class MainFrame extends JFrame {
 	      radioButton.setSelected(radioButton.getElements().nextElement().getModel(),true);
 	      hboxFormulaType.add(Box.createHorizontalGlue());
 	      Box XBox = Box.createHorizontalBox();
-	      JLabel x = new JLabel(" x:");
+	      JLabel x = new JLabel(" Х:");
 	      
 	      XBox.add(x);
 	      
@@ -114,7 +114,7 @@ public class MainFrame extends JFrame {
 					catch(NumberFormatException ex)
 					{
 						JOptionPane.showMessageDialog(MainFrame.this, "Ошибка в формате записи числа с " +
-								"плавающей точкой","Ошибочный формат числа", JOptionPane.WARNING_MESSAGE);    
+								"плавающей точкой","Ошибочный формат числа", JOptionPane.WARNING_MESSAGE);   
 					}
 				}
 			});
@@ -146,9 +146,9 @@ public class MainFrame extends JFrame {
 			{
 				public void actionPerformed(ActionEvent ev) 
 				{
-					result=0.0;
-					field_sum.setText(sum.toString());
 					sum=0.0;
+					field_sum.setText(sum.toString());
+					
 				}});
 
 			JButton buttonReset = new JButton("Очистить поля"); 
@@ -198,4 +198,5 @@ public class MainFrame extends JFrame {
 
 		}
 	}
+
 
